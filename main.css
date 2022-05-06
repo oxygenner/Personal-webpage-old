@@ -1,0 +1,169 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Cantarell-Regular';
+    font-style: normal;
+    src: url("/fonts/Cantarell-Regular.ttf")
+}
+
+body {
+    font-size: 20px;
+    font-family: Cantarell-Regular;
+    background: black;
+    line-height: 30px;
+    letter-spacing: normal;
+    color: #ffffffe1
+}
+
+.main {
+    width: 950px;
+    margin: auto;
+    padding: 30px;
+    
+}
+.main h1 {
+    line-height: 40px;
+}
+
+.main h2 {
+    color: #ececec;
+}
+
+.main h3 {
+    color: #ececec
+}
+
+.main p {
+    margin: 1.10em 0;
+    font-size: 1.08em;
+}
+
+button {
+    border: 0;
+    background: #1b1b3a;
+    border-radius: 4px;
+    box-shadow: 4px 5px 5px #151515;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 12px 20px;
+    transition: all .1s linear;
+}
+  button:active {
+    box-shadow: 0 2px 0 #1b1b3a;
+    transform: translateY(3px);
+}
+
+.main .code {
+    white-space: nowrap;
+    background: #3e4756;
+    padding: 2px 5px;
+    border-radius: 3px
+}
+
+.main a {
+    transition: 150ms ease;
+    font-weight: 600;
+    color: #197bbd92;
+    text-decoration: none;
+    border-bottom: 0 solid transparent
+}
+
+.main a:hover {
+    color: #2697E3;
+    border-bottom: 1px solid #ffffff7e
+}
+
+.main .header {
+    margin-bottom: 20px
+}
+
+.main .body .section {
+    margin: 75px 0
+}
+
+.main .body .section h2::before {
+    content: '-';
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    width: 2em;
+    margin-left: -2em
+}
+
+.main .body .section h3::before {
+    content: '-';
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.692);
+    width: 2em;
+    margin-left: -2em
+}
+
+.topnav {
+    background-color: #1b1b3a;
+    overflow: hidden;
+    border-radius: 5px;
+    line-height: 2px;
+}
+
+.topnav a {
+    float: left;
+    color: #f7fff7;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.topnav a:hover {
+    background-color: #F7FFF7;
+    transition:cubic-bezier(1,-0.02,.27,1.79) 0.3s;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #e7e7e7;
+    color: #121113;
+}
+.topnav a.fi {
+    float: right;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    text-align: left;
+    background-color: #1B1B3A;
+    overflow: hidden;
+    line-height: 2px;
+    font-size: small;
+}
+.footer p{
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .main {
+        width: 85%;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main .body .section h2::before {
+        display: inline-block;
+    }
+    .main p {
+        font-size: 0.9em;
+    }
+}
