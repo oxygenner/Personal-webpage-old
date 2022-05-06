@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Carlos's personal website",
+    "short_name": "carlos.songi.ee",
+    "background_color": "#22262D",
+    "theme_color": "#22262D" ,
+    "display": "browser",
+    "start_url": "https://carlos.songi.ee/",
+    "description": "Carlos Songi's personal website",
+    "dir": "ltr",
+    "orientation": "any"
+}
