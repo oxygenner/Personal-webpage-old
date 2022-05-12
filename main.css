@@ -40,6 +40,13 @@ body {
     margin: 1.10em 0;
     font-size: 1em;
 }
+.disabled{
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
 /*napit*/
 button {
     border: 0;
@@ -234,8 +241,7 @@ div.gallery {
     color:white;
     position:relative
 }
-
-  
+ 
 /*media yes*/
 @media screen and (max-width: 800px) {
     .main {
@@ -254,6 +260,6 @@ div.gallery {
 }
 @media screen and (prefers-reduced-motion: reduce) {
 	html {
-		scroll-behavior: auto;
+		scroll-behavior:smooth;
 	}
 }

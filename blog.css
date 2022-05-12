@@ -1,0 +1,213 @@
+
+@font-face {
+    font-display: swap;
+    font-family: 'Cantarell-Regular';
+    font-style: normal;
+    src: url("/fonts/Cantarell-Regular.ttf")
+}
+/*Untilted nii sanotusti*/
+body {
+    font-size: 25px;
+    font-family: Cantarell-Regular;
+    background-color: #121113;
+    background-image: linear-gradient(140deg, #421b8f, #211A1D);
+    line-height: 30px;
+    letter-spacing: normal;
+    color: #ffffffe1;
+    scroll-behavior: smooth;
+    
+}
+/*topnav*/
+
+.topnav {
+    background-color: #00000048;
+    overflow: hidden;
+    border-radius: 5px;
+    line-height: 2px;
+}
+.topnav a {
+    float: left;
+    color: #f7fff7;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.topnav a:hover {
+    background-color: #F7FFF7;
+    transition:cubic-bezier(1,-0.02,.27,1.79) 0.3s;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #e7e7e7;
+    color: #121113;
+}
+.topnav a.fi {
+    float: right;
+}
+.topnav a.est{
+    float: right;
+}
+.topnav a.eng{
+    float:right
+}
+.main .code {
+    white-space: nowrap;
+    background: #3e4756;
+    padding: 2px 5px;
+    border-radius: 3px
+}
+
+/*main*/
+
+.main a {
+    transition: 150ms ease;
+    font-weight: 600;
+    color: #197bbd92;
+    text-decoration: none;
+    border-bottom: 0 solid transparent
+}
+
+.main a:hover {
+    color: #2697E3;
+    border-bottom: 1px solid #ffffff7e
+}
+
+.main .header {
+    margin-bottom: 20px
+}
+
+.main .body .section {
+    margin: 75px 0
+}
+
+.main .body .section h2::before {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    width: 2em;
+    margin-left: -2em
+}
+
+.main .body .section h3::before {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.692);
+    width: 2em;
+    margin-left: -2em
+}
+.main {
+    width: 950px;
+    margin: auto;
+    padding: 30px;
+   
+}
+.main h1 {
+    line-height: 40px;
+    text-align: center;
+}
+
+.main h2 {
+    color: #ececec;
+    text-align: center;
+}
+
+.main h3 {
+    color: #ececec
+}
+
+.main p {
+    margin: 1.10em 0;
+    font-size: 1em;
+}
+.disabled{
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+/*button*/
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; /* Place the button at the bottom of the page */
+    right: 50px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    font: inherit;
+    border: none; /* Remove borders */
+    outline: none   ; /* Remove outline */
+    background-color: #1b1b3a; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    box-shadow: 4px 5px 5px #151515;
+    padding: 12px 20px;
+  }
+  
+  #myBtn:active {
+    box-shadow: 0 2px 0 #1b1b3a; /* Add a dark-grey background on hover */
+    transform: translateY(3px);
+    transition: all 0.1s linear;
+  }
+  button {
+    border: 0;
+    background: #1b1b3a;
+    border-radius: 4px;
+    box-shadow: 4px 5px 5px #151515;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 12px 20px;
+    transition: all .1s linear;
+}
+  button:active {
+    box-shadow: 0 2px 0 #1b1b3a;
+    transform: translateY(3px);
+}
+  /*footer*/
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    text-align: left;
+    background-color: #3e3733b8;
+    overflow: hidden;
+    line-height: 2px;
+    font-size: small;
+}
+.footer p{
+    margin-left: 10px;
+}
+ /*media*/ 
+@media screen and (max-width: 800px) {
+    .main {
+        width: 85%;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main .body .section h2::before {
+        display: inline-block;
+    }
+    .main p {
+        font-size: 0.9em;
+    }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior:smooth;
+	}
+}
