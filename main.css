@@ -1,18 +1,17 @@
 @font-face {
     font-display: swap;
-    font-family: 'Cantarell-Regular';
+    font-family: 'SourceSansPro-Regular';
     font-style: normal;
-    src: url("/fonts/Cantarell-Regular.ttf")
+    src: url("/fonts/SourceSansPro-Regular.ttf")
 }
 /*Untilted nii sanotusti*/
 body {
     font-size: 20px;
-    font-family: Cantarell-Regular;
+    font-family: SourceSansPro-Regular;
     background: black;
     line-height: 30px;
     letter-spacing: normal;
     color: #ffffffe1;
-    scroll-behavior: smooth;
     
 }
 /*sisältöä viel*/
@@ -36,7 +35,7 @@ body {
     color: #ececec
 }
 
-.main p {
+.main p { 
     margin: 1.10em 0;
     font-size: 1em;
 }
@@ -107,7 +106,7 @@ button {
 
 .main a:hover {
     color: #2697E3;
-    border-bottom: 1px solid #ffffff7e
+    border-bottom: solid #ffffff7e
 }
 
 .main .header {
@@ -140,18 +139,50 @@ button {
 /*topnavikaatio*/
 .topnav {
     background-color: #1b1b3a;
-    overflow: hidden;
+    overflow:auto;
     border-radius: 5px;
-    line-height: 2px;
+    min-height: 30px;
+    height: auto;
 }
 .topnav a {
     float: left;
     color: #f7fff7;
     text-align: center;
-    padding: 10px 12px;
+    padding: 0px 12px;
     text-decoration: none;
     font-size: 17px;
     border-radius: 5px;
+}
+.topnav img{
+    display:flexbox;flex-direction: column;
+    padding-top: 8px; padding-right: 3px;
+    width: 15px; height: 15px;
+    align-content: center;
+    filter: invert(70%) sepia(72%) saturate(22%) hue-rotate(323deg) brightness(94%) contrast(86%);
+}
+.topnav a:hover img{
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(100%);
+}
+.topnav a.active img{
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(100%);
+}
+.topnav .dropdown button.dropbtn{
+    display: block;
+    min-height: 0px;
+    box-shadow: none;
+    animation: none;
+    transform: none;
+}
+
+.topnav button:active{
+    background-color: #F7FFF7;
+    color: black;
+}
+.topnav button:hover img{
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(100%);
+}
+.topnav button:active img{
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(101%) contrast(100%);
 }
 
 .topnav a:hover {
@@ -164,8 +195,15 @@ button {
     background-color: #e7e7e7;
     color: #121113;
 }
-.topnav a.fi {
+.topnav a.fi{
     float: right;
+}
+.topnav .flags{
+    padding-right: 4px;
+    filter: none;
+}
+.topnav:hover img.flags {
+    filter: none;
 }
 .topnav a.est{
     float: right;
@@ -241,10 +279,61 @@ div.gallery {
     color:white;
     position:relative
 }
+.dropdown {
+    float: left;
+    overflow: visible;
+    height: 30px;
+  }
+  .dropdown .dropbtn{
+    font-size: 17px;  
+    min-height: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 12px;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1b1b3a;
+    background-image: linear-gradient(150deg, #1b1b3a, #000000);
+    box-shadow: 4px 5px 5px #1515157a;
+    border-radius: 5px;
+    z-index: 1;
+    animation: growDown 250ms ease-in-out forwards;
+    transform-origin: top center ;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(221, 221, 221, 0.273);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown a:hover {background-color: #ddd;}
+
+    .show {display: block;}
+
  
 /*media yes*/
-@media screen and (max-width: 800px) {
-    .main {
+@media screen and (max-width: 1000px) {
+    .main{
         width: 85%;
         min-width: 0;
     }
@@ -258,8 +347,25 @@ div.gallery {
         font-size: 0.9em;
     }
 }
-@media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior:smooth;
-	}
-}
+
+@keyframes growDown {
+
+    0% {
+  
+      transform: scaleY(0)
+  
+    }
+  
+    80% {
+  
+      transform: scaleY(1.1)
+  
+    }
+  
+    100% {
+  
+      transform: scaleY(1)
+  
+    }
+  
+  }

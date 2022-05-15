@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="obwhodxn idc0_330" lang="fi">
+<head>
+    <title>Carlos Songi's Blogi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="/blog.css">
+    <meta name="description" content="Carlos Songin blogi sivu">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="theme-color" content="#181818">
+    <link rel="manifest" href="/manifest.json">
+    
+</head>
+<body>
+<!navigointi>
+<div class="topnav">
+  <a href="/fi/"><img src="/content/icons/home_FILL0_wght400_GRAD0_opsz48.svg">Koti</a>
+  <a href="/fi/#minusta"><img src="/content/icons/person_FILL0_wght400_GRAD0_opsz48.svg">Minusta</a>
+  <a href="/fi/yhteystiedot/"><img src="/content/icons/contact_page_FILL0_wght400_GRAD0_opsz48.svg">Yhteystiedot</a>
+  <a href="/fi/setuppi/"><img src="/content/icons/computer_FILL0_wght400_GRAD0_opsz48.svg">Setuppi</a>
+  <div class="dropdown">
+      <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/more_horiz_FILL0_wght400_GRAD0_opsz48.svg" class="icon">Lisää</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="/fi/kuvat/">Kuvat</a>
+        <a class="active" href="/fi/blogi/">Blogi</a>
+        <a href="/fi/promootiot/"">Promootiot</a>
+        <a href="/fi/logeja/">Päivitys logeja</a>
+        <a href="/fi/projects/">Projekteja</a>
+        <a href="/fi/minecraftmap/">Minecraft 360</a>
+      </div>
+    </div>
+    <div class="dropdown" style="float:right;">
+      <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/fin.svg" class="flags" style="float: right; height: 20px; width: 20px;"></button>
+      <div id="myDropdown" class="dropdown-content">
+  <a class="fi"  href="/blog/"><img src="/content/icons/usa.svg" class="flags">EN</a>
+  <a class="est"href="/est/Blog/"><img src="/content/icons/est.png" class="flags">EE</a>
+      </div>
+    </div>
+</div>
+<div class="main">
+  <div class="header">
+      <h1>Carlos Songi - Blogi sivu</h1>
+  </div>
+    
+<!sisältö>
+
+<div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Tyhjä täksi hetkeksi</h2>
+        <h5>Empty</h5>
+        <div class="img" style="height:220px;">Image</div>
+        <p>Jotain tekstiä..</p>
+        <p>Työskentelen juuri <i>ideoiden</i> kanssa, minkälaista blogia voisi pistää tänne.</p>
+      </div>
+      <div class="card">
+        <h2>Tyhjä täksi hetkeksi</h2>
+        <h5>Empty</h5>
+        <div class="img" style="height:220px;">Image</div>
+        <p>Jotain tekstiä..</p>
+        <p>Työskentelen juuri <i>ideoiden</i> kanssa, minkälaista blogia voisi pistää tänne.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+<!napit ylipäätää>
+            <script src="/totop.js" button onclick="topFunction()" id="myBtn" title="Ylös? Kyllä!">Ylös</script> 
+<!ylösnappi>
+<!footteri>
+             <div class="footer">
+                <script>
+                    update = new Date(document.lastModified)
+                    theMonth = update.getMonth() + 1
+                    theDate = update.getDate()
+                    theYear = update.getFullYear()
+                    theTimeGB = update.toLocaleTimeString('en-GB')
+                    document.writeln("<p>Viimeksi muokattu: " + theDate + "." + theMonth + "." + theYear + ", " + theTimeGB, "</p>")
+                </script>
+                <script>
+                  /* When the user clicks on the button, 
+                  toggle between hiding and showing the dropdown content */
+                  function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                  }
+                  
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                  </script>
+            </div>
+</div></div></body></html>

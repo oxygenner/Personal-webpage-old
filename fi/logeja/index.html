@@ -1,5 +1,5 @@
-<html class="obwhodxn idc0_330" lang="fi">
-    
+<!DOCTYPE html>
+<html class="obwhodxn idc0_330" lang="fi">   
 <head>
     <title>Pävitykset</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,19 +15,30 @@
 </head>
 <body>
 <!navigointi>
-    <div class="topnav">
-        <a href="/#Koti">Koti</a>
-        <a href="/#aboutme">Minusta</a>
-        <a href="/fi/yhteystiedot/">Yhteystiedot</a>
-        <a href="/fi/setuppi/">Setuppi</a>
+<div class="topnav">
+  <a href="/fi/"><img src="/content/icons/home_FILL0_wght400_GRAD0_opsz48.svg">Koti</a>
+  <a href="/fi/#minusta"><img src="/content/icons/person_FILL0_wght400_GRAD0_opsz48.svg">Minusta</a>
+  <a href="/fi/yhteystiedot/"><img src="/content/icons/contact_page_FILL0_wght400_GRAD0_opsz48.svg">Yhteystiedot</a>
+  <a href="/fi/setuppi/"><img src="/content/icons/computer_FILL0_wght400_GRAD0_opsz48.svg">Setuppi</a>
+  <div class="dropdown">
+      <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/more_horiz_FILL0_wght400_GRAD0_opsz48.svg" class="icon">Lisää</button>
+      <div id="myDropdown" class="dropdown-content">
         <a href="/fi/kuvat/">Kuvat</a>
         <a href="/fi/blogi/">Blogi</a>
-        <a class="disabled" title="No promos atm">Promootiot</a>
-        <a class="active" href="/fi/logeja/">Logeja</a>
-        <a class="est"href="/est/logid">🇪🇪</a>
-        <a class="fi"  href="/update/log/">🇺🇸</a>
-        
+        <a href="/fi/promootiot/"">Promootiot</a>
+        <a class="active" href="/fi/logeja/">Päivitys logeja</a>
+        <a href="/fi/projects/">Projekteja</a>
+        <a href="/fi/minecraftmap/">Minecraft 360</a>
+      </div>
     </div>
+    <div class="dropdown" style="float:right;">
+      <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/fin.svg" class="flags" style="float: right; height: 20px; width: 20px;"></button>
+      <div id="myDropdown" class="dropdown-content">
+  <a class="fi"  href="/update/log/"><img src="/content/icons/usa.svg" class="flags">EN</a>
+  <a class="est"href="/est/logid"><img src="/content/icons/est.png" class="flags">EE</a>
+      </div>
+    </div>
+</div>
     <div class="main">
         <div class="header">
             <h1>Päivitys logeja:</h1>
@@ -65,14 +76,20 @@
                     <div class="container right">
                         <div class="content">
                           <h2>10-11.5.2022</h2>
-                          <p>Tein updatelogi blogi sivun ja pieniä korjauksia liittyen oikeinkirjoitukseen ja pari bugia tuli korjattua
+                          <p>Tein updatelogi <a href="/fi/blogi/">blogi sivun</a> ja pieniä korjauksia liittyen oikeinkirjoitukseen ja pari bugia tuli korjattua
                             navigaatio osaan.</p>
+                        </div>
+                      </div>
+                      <div class="container left">
+                        <div class="content">
+                          <h2>13-16.5.2022</h2>
+                          <p>Tein uuden navigaatiopalkin ja pari uutta sivu ideaa. Esimerkiksi (Minecraft 360, Projektit ja promootiot)</p>
                         </div>
                       </div>
                   </div> 
 
             </div>
-            <script src="/totop.js" button onclick="topFunction()" id="myBtn" title="top? yes!">Top</script> 
+            <script src="/totop.js" button onclick="topFunction()" id="myBtn" title="Ylös? Kyllä!">Ylös</script> 
 <!footteri>
              <div class="footer">
                 <script>
@@ -83,6 +100,26 @@
                     theTimeGB = update.toLocaleTimeString('en-GB')
                     document.writeln("<p>Viimeksi muokattu: " + theDate + "." + theMonth + "." + theYear + ", " + theTimeGB, "</p>")
                 </script>
-
+                <script>
+                  /* When the user clicks on the button, 
+                  toggle between hiding and showing the dropdown content */
+                  function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                  }
+                  
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                      var dropdowns = document.getElementsByClassName("dropdown-content");
+                      var i;
+                      for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                          openDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                  }
+                  </script>                
             </div>
 </div></div></body></html>

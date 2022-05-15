@@ -1,5 +1,5 @@
-<html class="obwhodxn idc0_330" lang="en">
-    
+<!DOCTYPE html>
+<html class="obwhodxn idc0_330" lang="en">   
 <head>
     <title>Setup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,17 +17,30 @@
     
 <!navigointi>
 <div class="topnav">
-    <a href="/#home">Home</a>
-    <a href="/#aboutme">About</a>
-    <a href="/contact/">Contact</a>
-    <a class="active "href="/setup/">Setup</a>
-    <a href="/gallery/">Gallery</a>
-    <a href="/blog/">Blog</a>
-    <a class="disabled" title="No promos atm">Promotions</a>
-    <a href="/update/log/">Update log</a>
-    <a class="fi"  href="/fi/setuppi/">🇫🇮</a>
-    <a class="est"href="/est/setup/">🇪🇪</a>
-</div>
+    <a href="/"><img src="/content/icons/home_FILL0_wght400_GRAD0_opsz48.svg">
+    Home</a>
+    <a href="/#aboutme"><img src="/content/icons/person_FILL0_wght400_GRAD0_opsz48.svg"> About</a>
+    <a href="/contact/"><img src="/content/icons/contact_page_FILL0_wght400_GRAD0_opsz48.svg"> Contact</a>
+    <a class="active" href="/setup/"><img src="/content/icons/computer_FILL0_wght400_GRAD0_opsz48.svg"> Setup</a>
+    <div class="dropdown">
+        <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/more_horiz_FILL0_wght400_GRAD0_opsz48.svg" class="icon"> More</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/gallery/">Gallery</a>
+          <a href="/blog/">Blog</a>
+          <a href="/promotions/"">Promotions</a>
+          <a href="/update/log/">Update log</a>
+          <a href="/projects/">Projects</a>
+          <a href="/minecraftmap/">Minecraft 360</a>
+        </div>
+      </div>
+      <div class="dropdown" style="float:right;">
+        <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/usa.svg" class="flags" style="float: right; height: 20px; width: 20px;"></button>
+        <div id="myDropdown" class="dropdown-content">
+    <a class="fi"  href="/fi/setuppi/"><img src="/content/icons/fin.svg" class="flags">FI</a>
+    <a class="est"href="/est/setup/"><img src="/content/icons/est.png" class="flags">EE</a>
+        </div>
+      </div>
+  </div>
     <div class="main">
         <div class="header">
             <h1>Carlos Songi - Setup</h1>
@@ -75,6 +88,26 @@
                     theTimeGB = update.toLocaleTimeString('en-GB')
                     document.writeln("<p>Last modified: " + theDate + "." + theMonth + "." + theYear + ", " + theTimeGB, "</p>")
                 </script>
-
+                <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                      document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                    </script>
             </div>
 </div></div></body></html>

@@ -1,5 +1,5 @@
-<html class="obwhodxn idc0_330" lang="fi">
-    
+<!DOCTYPE html>
+<html class="obwhodxn idc0_330" lang="fi">    
 <head>
     <title>Yhteystiedot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,17 +17,29 @@
     
 <!navigointi>
 <div class="topnav">
-    <a href="/fi/">Koti</a>
-    <a href="/fi/#minusta">Minusta</a>
-    <a class="active" href="/fi/yhteystiedot/">Yhteystiedot</a>
-    <a href="/fi/setuppi/">Setuppi</a>
-    <a href="/fi/kuvat/">Kuvat</a>
-    <a href="/fi/blogi/">Blogi</a>
-    <a class="disabled">Promootiot</a>
-    <a href="/fi/logeja/">Logeja</a>
-    <a class="fi"  href="/est/kontakt/">🇪🇪</a>
-    <a class="eng"href="/contact/">🇺🇸</a>
-    </div>
+    <a href="/fi/"><img src="/content/icons/home_FILL0_wght400_GRAD0_opsz48.svg">Koti</a>
+    <a href="/fi/#minusta"><img src="/content/icons/person_FILL0_wght400_GRAD0_opsz48.svg">Minusta</a>
+    <a class="active" href="/fi/yhteystiedot/"><img src="/content/icons/contact_page_FILL0_wght400_GRAD0_opsz48.svg">Yhteystiedot</a>
+    <a href="/fi/setuppi/"><img src="/content/icons/computer_FILL0_wght400_GRAD0_opsz48.svg">Setuppi</a>
+    <div class="dropdown">
+        <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/more_horiz_FILL0_wght400_GRAD0_opsz48.svg" class="icon">Lisää</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/fi/kuvat/">Kuvat</a>
+          <a href="/fi/blogi/">Blogi</a>
+          <a href="/fi/promootiot/"">Promootiot</a>
+          <a href="/fi/logeja/">Päivitys logeja</a>
+          <a href="/fi/projects/">Projekteja</a>
+          <a href="/fi/minecraftmap/">Minecraft 360</a>
+        </div>
+      </div>
+      <div class="dropdown" style="float:right;">
+        <button class="dropbtn"onclick="myFunction()"><img src="/content/icons/fin.svg" class="flags" style="float: right; height: 20px; width: 20px;"></button>
+        <div id="myDropdown" class="dropdown-content">
+    <a class="fi"  href="/fi/yhteystiedot/"><img src="/content/icons/usa.svg" class="flags">EN</a>
+    <a class="est"href="/est/kontakt"><img src="/content/icons/est.png" class="flags">EE</a>
+        </div>
+      </div>
+  </div>
     <div class="main">
         <div class="header">
             <h1>Carlos Songi - Yhteystiedot</h1>
@@ -54,6 +66,26 @@
                     theTimeGB = update.toLocaleTimeString('en-GB')
                     document.writeln("<p>Viimeks muokattu: " + theDate + "." + theMonth + "." + theYear + ", " + theTimeGB, "</p>")
                 </script>
-
+                <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                      document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                    </script>
             </div>
 </div></div></body></html>
